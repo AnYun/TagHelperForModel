@@ -1,4 +1,5 @@
 ﻿@model TagHelperForModel.Models.LoginViewModel
+@addTagHelper "*, TagHelperForModel"
 
 @{
     ViewData["Title"] = "Login";
@@ -13,14 +14,12 @@
         <form asp-action="Login">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Account" class="control-label"></label>
+                <display-title asp-for="Account" class="control-label"></display-title>
                 <input asp-for="Account" class="form-control" />
-                <span asp-validation-for="Account" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
+                <display-title asp-for="Password" class="control-label"></display-title>
                 <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Login" class="btn btn-primary" />

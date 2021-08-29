@@ -11,7 +11,7 @@ namespace TagHelperForModel.Models
         /// <summary>
         /// 帳號
         /// </summary>
-        [Display(Name = "帳號")]
+        [Display(Name = "帳號", Description = "請不要輸入 Admin 作為帳號！")]
         [Required(ErrorMessage = "請輸入 {0}")]
         public string Account { get; set; }
         /// <summary>
